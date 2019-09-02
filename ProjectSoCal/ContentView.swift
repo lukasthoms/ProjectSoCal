@@ -9,8 +9,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var planTitle = ""
+    @State private var planTime = Date()
+    @State private var planMessage = ""
     var body: some View {
-        Text("Hello World")
+        
+        VStack {
+            Text("Welcome to SoCal")
+            TextField("Enter a description", text: $planTitle)
+                .padding(15.0)
+            DatePicker(selection: $planTime) {
+                Text("Date")
+            }
+            TextField("Enter a message", text: $planMessage)
+            Button(action: {
+                APIClient().sendInvite(planTitle: self.planTitle, planDate: self.planTime, planMessage: self.planMessage)
+            }) { Text("Send Invite") }
+        }
+        
     }
 }
 
