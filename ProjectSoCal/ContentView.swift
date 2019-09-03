@@ -30,7 +30,7 @@ struct ContentView: View {
                     Text("Date")
                 }
                 
-                TextField("Enter a message", text: $planMessage)
+                TextField("Enter a message", text: $planMessage).padding(15.0)
                 
                 ForEach(invitees.contacts, id: \.identifier) { contact in
                     Text(contact.givenName)
@@ -38,12 +38,13 @@ struct ContentView: View {
                 
                 NavigationLink(destination: ContactPickerHack(selectedInvitees: invitees)) {
                     Text("Pick Contacts")
-                }
+                }.padding(15.0)
                 
                 Button(action: {
-                    APIClient().sendInvite(planTitle: self.planTitle, planDate: self.planTime, planMessage: self.planMessage)
+                    APIClient().sendInvite(planTitle: self.planTitle, planDate: self.planTime, planMessage: self.planMessage, invitees: self.invitees)
                     
-                }) { Text("Send Invite") }
+                }) { Text("Send Invite")
+                }.padding(15.0)
             }
         }
         
