@@ -17,6 +17,10 @@
 		8089811A231D9EDC00CF6869 /* ProjectSoCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80898119231D9EDC00CF6869 /* ProjectSoCalTests.swift */; };
 		80898125231D9EDC00CF6869 /* ProjectSoCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80898124231D9EDC00CF6869 /* ProjectSoCalUITests.swift */; };
 		80FF361F231DACD9000A80CF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF361E231DACD9000A80CF /* APIClient.swift */; };
+		80FF3621231DC247000A80CF /* ContactPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF3620231DC247000A80CF /* ContactPickerViewController.swift */; };
+		80FF3629231DD69E000A80CF /* ContactPickerHackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF3628231DD69E000A80CF /* ContactPickerHackViewController.swift */; };
+		80FF362B231DD749000A80CF /* ContactPickerHack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF362A231DD749000A80CF /* ContactPickerHack.swift */; };
+		80FF362D231DEDD5000A80CF /* Invitees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF362C231DEDD5000A80CF /* Invitees.swift */; };
 		E42F2F2030EE87DF61488512 /* Pods_ProjectSoCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F751A9616535D459AA6F786 /* Pods_ProjectSoCal.framework */; };
 		FD6EB88C6618241524AC1415 /* Pods_ProjectSoCalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE08AD265DFCAECFAD31C85 /* Pods_ProjectSoCalTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +61,10 @@
 		80898124231D9EDC00CF6869 /* ProjectSoCalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSoCalUITests.swift; sourceTree = "<group>"; };
 		80898126231D9EDC00CF6869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80FF361E231DACD9000A80CF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		80FF3620231DC247000A80CF /* ContactPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerViewController.swift; sourceTree = "<group>"; };
+		80FF3628231DD69E000A80CF /* ContactPickerHackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerHackViewController.swift; sourceTree = "<group>"; };
+		80FF362A231DD749000A80CF /* ContactPickerHack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerHack.swift; sourceTree = "<group>"; };
+		80FF362C231DEDD5000A80CF /* Invitees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitees.swift; sourceTree = "<group>"; };
 		8BDDFCB440A7B34584DA645F /* Pods-ProjectSoCal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSoCal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSoCal/Pods-ProjectSoCal.debug.xcconfig"; sourceTree = "<group>"; };
 		8CBF64DCFC27790D47D7D6ED /* Pods-ProjectSoCalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSoCalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSoCalTests/Pods-ProjectSoCalTests.release.xcconfig"; sourceTree = "<group>"; };
 		A98587C656521CB92805E87C /* Pods-ProjectSoCal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSoCal.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSoCal/Pods-ProjectSoCal.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +152,10 @@
 				80898102231D9EDA00CF6869 /* AppDelegate.swift */,
 				80898104231D9EDA00CF6869 /* SceneDelegate.swift */,
 				80898106231D9EDA00CF6869 /* ContentView.swift */,
+				80FF362A231DD749000A80CF /* ContactPickerHack.swift */,
+				80FF3628231DD69E000A80CF /* ContactPickerHackViewController.swift */,
+				80FF362C231DEDD5000A80CF /* Invitees.swift */,
+				80FF3620231DC247000A80CF /* ContactPickerViewController.swift */,
 				80FF361E231DACD9000A80CF /* APIClient.swift */,
 				80898108231D9EDC00CF6869 /* Assets.xcassets */,
 				8089810D231D9EDC00CF6869 /* LaunchScreen.storyboard */,
@@ -389,7 +401,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80FF3621231DC247000A80CF /* ContactPickerViewController.swift in Sources */,
 				80898103231D9EDA00CF6869 /* AppDelegate.swift in Sources */,
+				80FF3629231DD69E000A80CF /* ContactPickerHackViewController.swift in Sources */,
+				80FF362B231DD749000A80CF /* ContactPickerHack.swift in Sources */,
+				80FF362D231DEDD5000A80CF /* Invitees.swift in Sources */,
 				80FF361F231DACD9000A80CF /* APIClient.swift in Sources */,
 				80898105231D9EDA00CF6869 /* SceneDelegate.swift in Sources */,
 				80898107231D9EDA00CF6869 /* ContentView.swift in Sources */,

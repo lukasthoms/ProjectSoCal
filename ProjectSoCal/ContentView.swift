@@ -7,25 +7,47 @@
 //
 
 import SwiftUI
+import ContactsUI
 
 struct ContentView: View {
+    
     @State private var planTitle = ""
     @State private var planTime = Date()
     @State private var planMessage = ""
+    @ObservedObject var invitees = Invitees()
+    
     var body: some View {
         
-        VStack {
-            Text("Welcome to SoCal")
-            TextField("Enter a description", text: $planTitle)
-                .padding(15.0)
-            DatePicker(selection: $planTime) {
-                Text("Date")
+        NavigationView {
+
+            VStack {
+                
+                Text("Make a New Plan")
+                
+                TextField("Enter a description", text: $planTitle)
+                
+                DatePicker(selection: $planTime) {
+                    Text("Date")
+                }
+                
+                TextField("Enter a message", text: $planMessage)
+                
+                ForEach(invitees.contacts, id: \.identifier) { contact in
+                    Text(contact.givenName)
+                }
+                
+                NavigationLink(destination: ContactPickerHack(selectedInvitees: invitees)) {
+                    Text("Pick Contacts")
+                }
+                
+                Button(action: {
+                    APIClient().sendInvite(planTitle: self.planTitle, planDate: self.planTime, planMessage: self.planMessage)
+                    
+                }) { Text("Send Invite") }
             }
-            TextField("Enter a message", text: $planMessage)
-            Button(action: {
-                APIClient().sendInvite(planTitle: self.planTitle, planDate: self.planTime, planMessage: self.planMessage)
-            }) { Text("Send Invite") }
         }
+        
+        
         
     }
 }
